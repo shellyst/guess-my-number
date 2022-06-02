@@ -59,6 +59,15 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 
 // Re-set the page on the Again button.
-document.querySelector(".again").addEventListener("click", function() {
-    
+document.querySelector(".again").addEventListener("click", function () {
+  number = Math.trunc(Math.random() * 20) + 1;
+
+  score = 20;
+
+  document.querySelector(".guess").value = "";
+  document.querySelector(".number").textContent = "?";
+  document.querySelector("body").style.backgroundColor = "#222";
+  document.querySelector(".number").style.width = "15rem";
+  document.querySelector(".message").textContent = `Start guessing...😉`;
+  document.querySelector(".score").textContent = score;
 });
